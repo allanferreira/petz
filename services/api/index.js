@@ -2,7 +2,7 @@ import axios from 'axios'
 import productsAPI from './productsAPI'
 
 export default axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/',
+    baseURL: 'https://my-json-server.typicode.com/allanferreira/petz-api/',
 })
 
 export {

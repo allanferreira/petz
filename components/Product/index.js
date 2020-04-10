@@ -1,9 +1,9 @@
 import Card from './Card'
 import List from './List'
-import Info from './Info'
+import Detail from './Detail'
 
 export {
     Card,
     List,
-    Info,
+    Detail,
 }

@@ -1,7 +1,8 @@
 import api from './index'
 
 export default {
-    all: () => api.get('posts'),
-    find: id => api.get(`posts/${id}`),
-    destroy: id => api.delete(`posts/${id}`),
+    all: () => api.get('products'),
+    find: id => api.get(`products/${id}`),
+    destroy: id => api.delete(`products/${id}`),
+    search: term => api.get(`products?name=${term}`),
 }

@@ -2,10 +2,18 @@ import Metadata from '@/components/Metadata'
 import {List, Card as Product} from '@/components/Product'
 import Page from '@/components/Page'
 import {productsAPI} from '@/services/api'
+import {Warning} from '@/components/Message'
 
 const Index = ({products = [], error = null}) => (
     <Page error={error}>
         <Metadata/>
+        
+        {products.length === 0 && 
+            <Warning title='Nenhum produto encontrado! '>
+                Tente adicionar o nome completo dele na busca.
+            </Warning>
+        }
+
         <List>
             {products.map(product => 
                 <Product 
@@ -18,12 +26,13 @@ const Index = ({products = [], error = null}) => (
     </Page>
 )
 
-Index.getInitialProps = async () => {
+Index.getInitialProps = async ({query}) => {
+
     let products = []
     let error = null
     
     try {
-        const {data} = await productsAPI.all()
+        const {data} = await productsAPI.search(query.q)
         products = data
     } catch (err) {
         error = err

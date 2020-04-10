@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export default ({ children, pageTitle='' }) => {
  
-    const title = pageTitle ? `Petz - ${pageTitle}` : 'Petz'
+    const title = pageTitle ? `Petz - ${pageTitle}` : 'Petz - Pet Shop Online'
     
     return (
         <Head>

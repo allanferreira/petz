@@ -8,7 +8,12 @@ const alt = '😋 Comidinha bem gostosa para cachorros'
 export default ({id, name}) => {
 
     const removeHandler = () => {
-        productsAPI.destroy(id)
+        try {
+            productsAPI.destroy(id)
+            alert('Item deletado! Entretanto as APIs de jsonplaceholder não persistem')
+        } catch (error) {
+            alert('Desculpe! Houve algum error ao deletar o produto. Tente novamente mais tarde.')
+        }
     }
 
     return (
