@@ -1,20 +1,12 @@
 import Metadata from '@/components/Metadata'
-import {List, Card as Product} from '@/components/Product'
+import {List as ProductList} from '@/components/Product'
 import Page from '@/components/Page'
 import {productsAPI} from '@/services/api'
 
 const Index = ({products = [], error = null}) => (
     <Page error={error}>
         <Metadata/>
-        <List>
-            {products.map(product => 
-                <Product 
-                    key={product.id}
-                    id={product.id}
-                    name={product.name}
-                />
-            )}
-        </List>
+        <ProductList products={products}/>
     </Page>
 )
 

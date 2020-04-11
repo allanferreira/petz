@@ -1,17 +1,19 @@
 import Metadata from '@/components/Metadata'
 import Page from '@/components/Page'
-import {Detail} from '@/components/Product'
+import {Detail as ProductDetail} from '@/components/Product'
 import {productsAPI} from '@/services/api'
 
-const Index = ({name, info, error = null}) => (
-    <Page error={error}>
-        <Metadata pageTitle={name}/>
-        <Detail
-            name={name}
-            info={info}
-        />
-    </Page>
-)
+const Index = product => {
+    
+    const {name, error = null} = product
+
+    return (
+        <Page error={error}>
+            <Metadata pageTitle={name}/>
+            <ProductDetail {...product}/>
+        </Page>
+    )
+}
 
 Index.getInitialProps = async ({query}) => {
     let product = {}

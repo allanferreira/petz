@@ -26,4 +26,5 @@ export const Name = styled.h1`
     color: ${colors.darkBlue};
     text-align: center;
     margin-bottom: 15px;
+    line-height: 1.3;
 `
