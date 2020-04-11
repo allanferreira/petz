@@ -40,7 +40,7 @@ Esse projeto tem alguns pontos legais e decisões que vou comentar para que voc�
 
 Primeiramente, você pode acessar o projeto agora pelo link: 🥳 [Ver funcionando](https://petz.now.sh/).
 
-Essa aplicação React tem foco em mostrar que tenho conhecimento de SSR e por conta disso usa [Next.js](https://nextjs.org/) e está rodando no [Zeit](https://zeit.co/).
+Essa aplicação React tem foco em mostrar que tenho conhecimento de SSR e por conta disso usa [Next.js](https://nextjs.org/) e está rodando no [Zeit](https://zeit.co/) com CI/CD.
 
 O Next.js tem algumas peculiaridades que são meio estranhas para quem não o usa no dia-a-dia então vale explicar rapidamente junto de algumas decisões de arquitetura que tomei no projeto.
 
