@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import { colors } from '@/services/styledVariables'
+import { colors, breakpoints } from '@/services/styledVariables'
 
 export const Info = styled.div`
     display: grid;
     grid-gap: 50px;
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: ${breakpoints.md.max}) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const ContentArea = styled.div``

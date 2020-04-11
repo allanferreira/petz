@@ -20,12 +20,17 @@ export const Navbar = styled.div`
 export const Logo = styled.img`
     height: 100%;
     width: auto;
+    @media (max-width: ${breakpoints.xs.max}) {
+        margin: 0 auto;
+        display: block;
+    }
 `
 
 export const LogoArea = styled.div`
     padding-right: 40px;
     width: 100px;
     @media (max-width: ${breakpoints.xs.max}) {
+        padding-right: 0;
         width: auto;
     }
 `
