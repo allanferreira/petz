@@ -13,6 +13,7 @@ export default ({ children, pageTitle='' }) => {
             <link rel="stylesheet" href="/css/reset.css"/>
             <link rel="stylesheet" href="/css/main.css"/>
 
+            <meta name="theme-color" content="#fccf3b"/>
             <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
             {children}
         </Head>
